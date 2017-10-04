@@ -14,26 +14,22 @@ const port = 3000;
 // Set Static Folder
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded());
 app.use(morgan('dev'));
 
 // Add headers
 app.use(function (req, res, next) {
-
-    // Website you wish to allow to connect
-    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:4200');
-
-    // Request methods you wish to allow
-    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
-
-    // Request headers you wish to allow
-    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
-
-    // Set to true if you need the website to include cookies in the requests sent
-    // to the API (e.g. in case you use sessions)
-    res.setHeader('Access-Control-Allow-Credentials', true);
-
-    // Pass to next layer of middleware
-    next();
+  // Website you wish to allow to connect
+  res.setHeader('Access-Control-Allow-Origin', 'http://localhost:4200');
+  // Request methods you wish to allow
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+  // Request headers you wish to allow
+  res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+  // Set to true if you need the website to include cookies in the requests sent
+  // to the API (e.g. in case you use sessions)
+  res.setHeader('Access-Control-Allow-Credentials', true);
+  // Pass to next layer of middleware
+  next();
 });
 
 
@@ -43,16 +39,18 @@ app.get('/', (req, res) => {
 
 // Get Clients - GET
 app.post('/users', (req, res, next) => {
-  var mhd = new User({  
-    username:'mhd',
-    password:'1234',
-    email: 'ss@22.com'
+  console.log('Im heeeeeeeeeeeeeeeeere');
+  var Siraj = new User ({  
+    email: 'ss@22.com',
+    // name: 'Siraj',
+    password2: '1234333',
+    products: []
   });
-  mhd.save( function(err,mhd) {
+  Siraj.save( function(err,result) {
     if(err){
       console.log(err);
     }else{
-      console.log(mhd);
+      console.log(result);
     }
    });
    res.end();
@@ -67,6 +65,16 @@ app.get('/users', function(req, res) {
   });
 });
 
+app.options('/cart', (req, res) => {
+  // console.log(req.body);
+  res.end();
+});
+
+app.post('/cart', (req, res) => {
+  var username = 'John Fleming';
+  User.findOneAndUpdate({name: 'John Fleming'}, {})
+  res.end();
+});
 
 // Add CLient - POST
 app.post('/products', (req, res, next) => {

@@ -29,6 +29,7 @@ export class CartComponent implements OnInit, OnDestroy {
   constructor(private productService: ProductService) {}
 
   removeProduct(product) {
+    this.productService.removeProduct(product);
     this.cart.splice(this.i, 1);
   }
 

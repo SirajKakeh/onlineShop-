@@ -19,7 +19,9 @@ export class ProductService {
     console.log(product);
     this.http.post('http://localhost:3000/cart', product).subscribe();
   }
-
+  removeProduct(product) {
+    this.http.delete(`http://localhost:3000/cart/?&{product._id}`,{});
+  }
   getCart() {
     return this.cart;
   }

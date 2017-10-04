@@ -14,7 +14,7 @@ const port = 3000;
 // Set Static Folder
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded());
+app.use(bodyParser.urlencoded({extended: true}));
 app.use(morgan('dev'));
 
 // Add headers
@@ -42,8 +42,8 @@ app.post('/users', (req, res, next) => {
   console.log('Im heeeeeeeeeeeeeeeeere');
   var Siraj = new User ({  
     email: 'ss@22.com',
-    // name: 'Siraj',
-    password2: '1234333',
+    username: 'Mhd',
+    password: '1234333',
     products: []
   });
   Siraj.save( function(err,result) {
@@ -71,9 +71,25 @@ app.options('/cart', (req, res) => {
 });
 
 app.post('/cart', (req, res) => {
-  var username = 'John Fleming';
-  User.findOneAndUpdate({name: 'John Fleming'}, {})
+  var username = 'Siraj';
+  // console.log(req.body);
+  User.find({username: username}, (err, user) => {
+    if(err) {
+      throw new Error(err);
+    }
+    // console.log(user);
+    user[0].products.push(req.body._id);
+    User.findOneAndUpdate({username: username}, { products: user[0].products }, (err, user) => {
+      if(err) {
+        throw new Error(err);
+      }
+    });
+  });
   res.end();
+});
+
+app.delete('/cart/*', (req, res) =>{
+  console.log(req.url);
 });
 
 // Add CLient - POST

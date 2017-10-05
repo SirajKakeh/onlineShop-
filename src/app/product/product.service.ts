@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { Product } from './product.class';
 import { Http, Headers } from '@angular/http';
 import { HttpHeaders } from '@angular/common/http';
 import 'rxjs/add/operator/map';
@@ -16,11 +15,11 @@ export class ProductService {
   }
   AddToCart(product) {
     this.cart.push(product);
-    console.log(product);
     this.http.post('http://localhost:3000/cart', product).subscribe();
   }
   removeProduct(product) {
-    this.http.delete(`http://localhost:3000/cart/?&{product._id}`,{});
+    // alert('I\'m in ');
+    this.http.delete('http://localhost:3000/cart/?' + product._id).subscribe();
   }
   getCart() {
     return this.cart;

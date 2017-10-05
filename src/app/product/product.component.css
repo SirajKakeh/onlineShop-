@@ -1,0 +1,10 @@
+#imgDiv {
+    height: 240px;
+    background-color: blue(164, 82, 55, 2);
+    color: blue;
+    margin: 25px;
+    border-radius: 15px 15px;
+    border-color: red(250, 0, 0, 0.64);
+    border-width: 1px;
+    box-shadow: 1px 1px 2px rgba(250, 0, 0, 0.8), 0 0 55px rgba(250, 0, 0, 0.8), 0 0 5px rgba(250, 0, 0, 0.8);
+}

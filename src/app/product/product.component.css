@@ -1,10 +1,44 @@
-#imgDiv {
-    height: 240px;
-    background-color: blue(164, 82, 55, 2);
-    color: blue;
-    margin: 25px;
+
+#b{
+    margin-left:0cm; 
+    width: 300px; 
+    opacity: 1;
+    filter: alpha(opacity=50); /* For IE8 and earlier */ 
+    
+}
+
+#imgDiv{
+    width: 100%; height: 240px;
+    background-color: #F0F5F4;
+    color: rgba(0, 0, 255, 0.78);
+    margin: 0px;
     border-radius: 15px 15px;
     border-color: red(250, 0, 0, 0.64);
     border-width: 1px;
-    box-shadow: 1px 1px 2px rgba(250, 0, 0, 0.8), 0 0 55px rgba(250, 0, 0, 0.8), 0 0 5px rgba(250, 0, 0, 0.8);
+    box-shadow: 10px 10px 10px rgba(0, 87, 250, 0.29), 0 0 55px rgba(0, 137, 250, 0.41), 0 0 5px rgba(250, 0, 0, 0.8);
+    opacity: 1;
+    filter: alpha(opacity=50); /* For IE8 and earlier */ 
+    
+    
 }
+
+#dd{
+    float: left; 
+    width: 300px;
+    margin-left:3.5cm; 
+    margin-top:3.5cm;  
+    background-color:rgba(232, 236, 238, 0.24); 
+    opacity:30%;
+}
+
+#titleDiv{
+    color: #0D0E0E;
+    margin-left:2.7cm; 
+    font-weight: bold;
+    font-size: 20px;
+    text-transform: uppercase;
+    padding: auto; 
+    text-shadow: 2px 2px 2px blue ;    
+}
+
+

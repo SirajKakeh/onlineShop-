@@ -1,8 +1,13 @@
-<h1>Welcome To Massturant</h1>
+
+
+<table id="mm">
+  <h1 id="mhd"><marquee behavior="scroll" direction="left" scrollamount="30">Welcome To Massturant </marquee></h1>
+  
 <div>
   <!-- <ul *ngFor="let product of products"> -->
   <app-product
-    style="width: 10px"
+    style="width: 10px; "
+
     *ngFor="let product of products"
     [selectedProduct]="selectedProduct"
     [onSelect]="onSelect"
@@ -13,3 +18,5 @@
     </li> -->
   <!-- </ul>  -->
 </div>
+
+</table>

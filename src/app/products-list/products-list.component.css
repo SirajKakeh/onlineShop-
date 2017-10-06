@@ -1,0 +1,13 @@
+#mhd{
+    color: black;
+    opacity: 1;
+    filter: alpha(opacity=50); /* For IE8 and earlier */ 
+    
+    
+}
+
+#mm{
+    background-image:url('https://images.alphacoders.com/829/thumb-1920-829844.jpg');
+    opacity: 0.7;
+    filter: alpha(opacity=50); /* For IE8 and earlier */ 
+}

@@ -5,6 +5,7 @@
     opacity: 1;
     filter: alpha(opacity=50); /* For IE8 and earlier */ 
     
+    
 }
 
 #imgDiv{
@@ -32,13 +33,15 @@
 }
 
 #titleDiv{
-    color: #0D0E0E;
-    margin-left:2.7cm; 
+    color: #040808;
+    margin-left:2.1cm; 
     font-weight: bold;
-    font-size: 20px;
+    font-size: 28px;
     text-transform: uppercase;
     padding: auto; 
-    text-shadow: 2px 2px 2px blue ;    
+    text-shadow: 0 0 0.2em #F1E8EE, 0 0 0.2em #EEE5E6,
+    0 0 0.2em #ECE5E9;
+
 }
 
 

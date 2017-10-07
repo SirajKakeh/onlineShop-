@@ -1,13 +1,15 @@
 #mhd{
-    color: black;
+    color: #000000;
     opacity: 1;
     filter: alpha(opacity=50); /* For IE8 and earlier */ 
+    text-shadow: 0 0 0.2em #E2CFDA, 0 0 0.2em #EBDDDE,
+    0 0 0.2em #E7D7E1
     
     
 }
 
 #mm{
     background-image:url('https://images.alphacoders.com/829/thumb-1920-829844.jpg');
-    opacity: 0.7;
+    opacity: 0.8;
     filter: alpha(opacity=50); /* For IE8 and earlier */ 
 }

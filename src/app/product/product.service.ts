@@ -6,6 +6,8 @@ import 'rxjs/add/operator/map';
 
 @Injectable()
 export class ProductService {
+
+  // inject http service inside this service, cool again right!
   constructor(private http: Http) { }
 
   public cart = [];

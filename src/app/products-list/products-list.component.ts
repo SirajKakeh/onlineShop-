@@ -8,16 +8,20 @@ import { ProductService } from '../product/product.service';
 })
 
 export class ProductsListComponent implements OnInit {
+  // displayed products array
   products: any[];
-  selectedProduct: any;
+
+  // make an instance of the service that we want the component to use, this is called "Service Injection"
   constructor(private productService: ProductService) { }
+
+  // use productService getProducts to fetch products from the database and store them in products array,
+  // Angular automatically detects when the array is changed and displays products, cool right!!!
   getProducts(): void {
     this.productService.getProducts().subscribe(products => this.products = products);
   }
+
   ngOnInit(): void {
+    // call the getProducts function on component load
     this.getProducts();
-  }
-  onSelect(product: any): void {
-    this.selectedProduct = product;
   }
 }

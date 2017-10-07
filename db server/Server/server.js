@@ -7,7 +7,7 @@ const User = require('../database/index').User;
 const Product = require('../database/index').Product;
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 
 

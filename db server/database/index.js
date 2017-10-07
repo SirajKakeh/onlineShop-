@@ -1,9 +1,8 @@
 var mongoose=require('mongoose');
 var Schema = mongoose.Schema;
 
-//mongoose.connect('localhost:27017/shopping');
+var mongoDB= 'mongodb://sm:1234@ds013405.mlab.com:13405/shopping';
 
-var mongoDB= 'mongodb://localhost:27017/shopping';
 mongoose.connect(mongoDB, { useMongoClient: true });
 
 var userSchema = new Schema({

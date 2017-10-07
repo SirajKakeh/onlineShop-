@@ -10,6 +10,6 @@
 
 #mm{
     background-image:url('https://images.alphacoders.com/829/thumb-1920-829844.jpg');
-    opacity: 0.8;
+    opacity: 0.;
     filter: alpha(opacity=50); /* For IE8 and earlier */ 
 }

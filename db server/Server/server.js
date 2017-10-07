@@ -79,22 +79,33 @@ app.get('/', (req, res) => {
   res.end();
 });
 
+app.options('/users', (req, res) => {
+  res.end();
+});
+
 // Get Clients - GET
 app.post('/users', (req, res, next) => {
-  var Siraj = new User ({  
-    email: 'ss@22.com',
-    username: 'Siraj',
-    password: '1234333',
-    products: []
-  });
-  Siraj.save( function(err,result) {
-    if(err){
-      console.log(err);
-    }else{
-      console.log(result);
+  User.find({username: 'Siraj'}, (err, found) => {
+    if(err) {
+      var Siraj = new User ({  
+        email: 'ss@22.com',
+        username: 'Siraj',
+        password: '1234333',
+        products: []
+      });
+      Siraj.save((err,result) => {
+        if(err){
+          console.log(err);
+        }else{
+          console.log(result);
+        }
+      });
     }
-   });
-   res.end();
+    else {
+      console.log('User already exists!');
+    }
+  });
+  res.end();
 });
 
 app.get('/users', function(req, res) {

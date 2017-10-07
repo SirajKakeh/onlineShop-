@@ -38,13 +38,31 @@ app.get('/', (req, res) => {
     new Product({
       imagePath: 'http://bestanimations.com/Food/waffles-animated-gif.gif',
       title: 'waffles',
-      description: 'amazing swite !!!!',
+      description: 'amazing Sweet !!!!',
       price:10
     }),
     new Product({
-      imagePath: 'http://bestanimations.com/Food/food-animated-gif-18.gif',
-      title: 'salad',
-      description: 'amazing salad !!!!',
+      imagePath: 'http://i.ndtvimg.com/i/2015-07/sweet-625_625x350_61438262502.jpg',
+      title: 'Pistachio Phirni',
+      description: 'Pistachio Sweet!!!!',
+      price:12
+    }),
+    new Product({
+      imagePath: 'http://i.ndtvimg.com/i/2015-07/sweet-625_625x350_71438262655.jpg',
+      title: 'Chilled Lemon Pie',
+      description: 'amazing Chilled !!!!',
+      price:15
+    }),
+    new Product({
+      imagePath: 'http://i.ndtvimg.com/i/2015-07/sweet-625_625x350_41438327004.jpg',
+      title: 'Cinnamon Rolls',
+      description: 'amazing Cinnamon !!!!',
+      price:12
+    }),
+    new Product({
+      imagePath: 'http://i.ndtvimg.com/i/2015-07/sweet-625_625x350_71438262734.jpg',
+      title: 'Chocolate Cake',
+      description: 'amazing Chocolate !!!!',
       price:20
     }),
     new Product({

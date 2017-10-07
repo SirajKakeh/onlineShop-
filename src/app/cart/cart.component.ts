@@ -18,13 +18,12 @@ export class CartComponent implements OnInit, OnDestroy {
   // But when you have a member that you explicitly intend to expose to the outside world as a part of your class's API
   // you should absolutely make it public to signal this intent: That's what public is for.
 
-  public totalPrice: number;
-  public totalQuantity: number;
+  // public totalPrice: number;
+  // public totalQuantity: number;
   public cartSubscription: Subscription;
   products;
   cart = [];
   i;
-
 
   constructor(private productService: ProductService) {}
 
@@ -37,20 +36,6 @@ export class CartComponent implements OnInit, OnDestroy {
     this.cart = [];
   }
 
-  getTotalPrice() {
-    let price = [];
-    let amount = [];
-    let cost = [];
-    // for (let i = 0; i < this.cart.length; i++){
-    //   if()
-    // }
-    // this.price = cost.reduce((acc, item) => {
-    //   return acc += item
-    // }, 0)
-    // this.quantity = quantity.reduce((acc, item) => {
-    //   return acc += item
-    // }, 0)
-  }
 // You need subscribe to run your async request
 // If you want to return an Observable some other code can subscribe to,
 // but you still want to manipulate the data events in the current method, use map.
@@ -65,7 +50,6 @@ export class CartComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.cartSubscription = this.productService.getProducts().subscribe(products => {
       this.products = products;
-      this.getTotalPrice();
     });
     this.cart = this.productService.getCart();
   }

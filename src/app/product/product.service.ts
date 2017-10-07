@@ -10,26 +10,30 @@ export class ProductService {
   // inject http service inside this service, cool again right!
   constructor(private http: Http) { }
 
+  // define a cart that will hold the data coming from the database
   public cart = [];
+
+  // send a get request to the server to get the products
   getProducts() {
     return this.http.get('http://localhost:3000/products')
         .map(res => res.json());
   }
+
+  // send the added product to the server
   AddToCart(product) {
     this.cart.push(product);
     this.http.post('http://localhost:3000/cart', product).subscribe();
   }
+
+  // delete a product from the database
   removeProduct(product) {
-    // alert('I\'m in ');
     this.http.delete('http://localhost:3000/cart/?' + product._id).subscribe();
   }
+
+  // make a way for other components to access cart in this comp.
   getCart() {
     return this.cart;
   }
-
-  // getProducts(): Promise<Product[]> {
-  //   return Promise.resolve(products);
-  // } // stub
 
   // the following function is to simulate a slow connection, it's just for testing
 

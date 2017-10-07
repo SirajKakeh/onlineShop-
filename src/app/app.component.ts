@@ -1,3 +1,4 @@
+// this is the main component that will be rendered to the index.html page
 import { Component, Input, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
 

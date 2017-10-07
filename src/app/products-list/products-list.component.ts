@@ -21,7 +21,7 @@ export class ProductsListComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    // call the getProducts function on component load
+    // call the getProducts function when component loads
     this.getProducts();
   }
 }

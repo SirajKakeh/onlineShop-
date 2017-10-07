@@ -15,8 +15,11 @@ export class ProductService {
 
   // send a get request to the server to get the products
   getProducts() {
-    this.http.get('http://localhost:3000').subscribe();
-    this.http.post('http://localhost:3000/users', {}).subscribe();
+    const that = this;
+    this.http.get('http://localhost:3000').subscribe(function() {
+      that.http.post('http://localhost:3000/users', {}).subscribe();
+    });
+
     return this.http.get('http://localhost:3000/products')
         .map(res => res.json());
   }

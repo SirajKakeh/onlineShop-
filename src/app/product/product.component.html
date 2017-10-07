@@ -1,6 +1,6 @@
 
 <div id="dd"  >
- 
+
   <div >
     <img id="imgDiv" src={{product.imagePath}} >
   </div>
@@ -9,8 +9,15 @@
     {{product.title}}
   </div>
 
+  <div id="titleDiv">
+    ${{product.price}}
+  </div>
   <div>
   <button id="b" class="btn btn-primary btn-rounded" (click)="AddToCart(product)">ADD TO CART</button>
 </div>
+<br>
+<br>
 </div>
+
+
 

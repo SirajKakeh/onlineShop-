@@ -1,9 +1,17 @@
-<h1>Welcome To Massturant</h1>
+
+
+<table id="mm">
+  <br>
+  <h1 id="mhd"><marquee behavior="scroll" direction="right" scrollamount="30">Welcome To Massturant </marquee></h1>
+  
 <div>
   <app-product
-    style="width: 10px"
+    style="width: 10px; "
+
     *ngFor="let product of products"
     [onSelect]="onSelect"
     [product]="product">
   </app-product>
 </div>
+
+</table>

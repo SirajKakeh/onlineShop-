@@ -1,27 +1,67 @@
-# Hi
+# Project Name
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.4.
+> Online Food Ordering System
 
-## Development server
+## Team
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+  - __Scrum Master - Team Member__: Siraj Kakeh
+  - __Product Owner - Team Member__: Mohammad Naseer
+  
 
-## Code scaffolding
+## Table of Contents
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1. [About](#About)
+2. [Summary](#Summary)
+3. [Tools](#tools)
+4. [Development](#development)
+    1. [Installing Dependencies](#installing-dependencies)
+    2. [Roadmap](#Roadmap)
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
 
-## Running unit tests
+## About
+Massturant is a full-stack MEAN (MongoDB, Express.js, Angular, Node.js) website that allows users to order food online
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Summary
 
-## Running end-to-end tests
+> On the frontend, Angular defines multiple components, and a service to serve the functionality of these components. The service is responsible of handling post/get/ delete requests to the server.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+On the backend, a Node js server with Express handles the requests and uses Mongoose to 'speak' with the MongoDB server. Storing incoming data inside two connected tables (products, users). 
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Tools
+Built With the Following Technologies/Tools:
+- Node.js (Express)
+- MongoDB (Mongoose)
+- Angular 4 (Angular)
+- Bootstrap 4
+
+Tools used for testing and developement:
+- Postman
+- Robo 3T
+
+Text Editor:
+- VSCode
+
+## Development
+
+### To run an instance of this app locally
+
+- install needed dependencies
+- run MongoDB server
+- run server.js from dbServer/Server/server.js
+- on the root folder run the app by using (ng serve -o)
+- you may need to refresh the page once AFTER it loads
+
+
+
+
+
+
+
+
+
+
+
+
+
